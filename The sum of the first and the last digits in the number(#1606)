@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    long long n,last_digit,first_digit;
+    scanf("%lld", &n);
+    n=abs(n);
+    last_digit=n%10;
+    while(n>0){
+        first_digit=n%10;
+        n=n/10;
+    }
+    printf("%lld", first_digit+last_digit);
+    
+    return 0;
+}
