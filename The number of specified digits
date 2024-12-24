@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    long long n,m,digit,k=0;
+    scanf("%lld%lld", &n,&m);
+    n=abs(n);
+    while(n>0){
+        digit=n%10;
+        if(digit==m)
+        k++;
+        n=n/10;
+    }
+    
+    printf("%lld", k);
+    
+    return 0;
+}
