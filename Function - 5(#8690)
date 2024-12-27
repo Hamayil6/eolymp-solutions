@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+long long f(long long x, long long y, long long z){
+    long long d;
+    d=x*y*z+x+y*y+z*z*z;
+    return d;
+}
+
+int main() {
+    long long x,y,z;
+    scanf("%lld%lld%lld", &x,&y,&z);
+    printf("%lld", f(x,y,z));
+    return 0;
+}
