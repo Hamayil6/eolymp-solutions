@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    double number;
+    scanf("%d", &n);
+    int det = 0;
+    int index;
+    for (int i = 1; i <= n; i++) {
+        scanf("%lf", &number);
+        if (number <= 2.5) {
+            det = 1;
+            index = i;
+            break;
+        }
+    }
+    if (det == 1) {
+        printf("%d %.2lf", index, number);
+    } else {
+        printf("Not Found");
+    }
+    return 0;
+}
