@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+long long ackermann (int m, long long n){
+   if (m==0){
+      return n+1;
+   } else if (m==1){
+      return n+2;
+   } else if (m==2){
+      return 2*n+3;
+   } else if (m==3){
+      long long a3[]= {5, 13, 29, 61, 125, 253, 509, 1021,
+                     2045, 4093, 8189, 16381, 32765, 6553,
+                     131069, 262141, 524285, 1048573, 
+                     2097149, 4194301, 8388605, 16777213,
+                     33554429, 67108861, 134217725};
+      return a3[n];
+   }
+   return -1;
+}
+int main(){
+   int m;
+   long long n;
+   while (scanf("%d %lld", &m, &n) != EOF){
+      printf("%lld\n", ackermann(m, n));
+   }
+   return 0;
+}
