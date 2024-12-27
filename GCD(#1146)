@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+
+long long gcd(long long a, long long b) {
+    if (b == 0) {
+        return a;
+    }
+    return gcd(b, a % b);
+}
+
+int main() {
+    long long n;
+
+    while (1) {
+        scanf("%lld", &n);
+        if (n == 0) {
+            break;
+        }
+
+        long long G = 0;
+        for (long long i = 1; i < n; ++i) {
+            for (long long j = i + 1; j <= n; ++j) {
+                G += gcd(i, j);
+            }
+        }
+
+        printf("%lld\n", G);
+    }
+
+    return 0;
+}
