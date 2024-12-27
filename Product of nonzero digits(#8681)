@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    long long n,digit,m;
+    scanf("%lld", &n);
+    m=1;
+    while(n>0){
+        digit=n%10;
+        if(digit!=0){
+            m=m*digit;
+        }
+        n=n/10;
+    }
+    printf("%lld", m);
+    
+    return 0;
+}
