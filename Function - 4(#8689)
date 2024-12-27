@@ -1,0 +1,14 @@
+#include <stdio.h>
+long long f(long long x){
+    long long y;
+    y=1+x+x*x;
+    return y;
+}
+
+int main() {
+    long long x;
+    scanf("%lld", &x);
+    printf("%lld", f(x));
+
+    return 0;
+}
