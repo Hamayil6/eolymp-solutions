@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+double f(double x){
+    double y;
+    y=sin(x)+sqrt(log(3*x)/log(4))+floor(3*exp(x))+1;
+    return y;
+}
+
+int main() {
+   double x;
+   while(scanf("%lf", &x)!=EOF)
+   printf("%.6lf\n", f(x));
+    return 0;
+}
