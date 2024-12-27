@@ -1,0 +1,37 @@
+#include <stdio.h>
+struct member {
+    int id;
+    int score;
+};
+int main() {
+    int len;
+    scanf("%d", &len);
+    struct member members[len], c;
+    
+    for (int i = 0; i < len; i++) {
+        int a, b;
+        scanf("%d%d", &a, &b);
+        members[i].id = a;
+        members[i].score = b;
+    }
+    for (int i = 0; i < len - 1; i++) {
+        int min_pos = i;
+        for (int j = i + 1; j < len; j++) {
+            if (members[j].score < members[min_pos].score) min_pos = j;
+            else if (members[j].score == members[min_pos].score) {
+                if (members[j].id > members[min_pos].id) min_pos = j;
+            }
+        }
+        if (min_pos != i) {
+            c = members[i];
+            members[i] = members[min_pos];
+            members[min_pos] = c;
+        }
+    }
+    
+    for (int i = len - 1; i >= 0; i--) {
+        printf("%d %d\n", members[i].id, members[i].score);
+    }
+    
+    return 0;
+}
