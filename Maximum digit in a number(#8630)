@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    long long n,digit,max_digit=0;
+    scanf("%lld", &n);
+    while(n>0){
+        digit=n%10;
+        if(digit>=max_digit)
+        max_digit=digit;
+        n=n/10;
+    }
+    printf("%lld", max_digit);
+    return 0;
+}
