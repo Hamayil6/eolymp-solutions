@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+void insertion_sort(int a[], int len);
+
+int main() {
+    int len, index;
+    scanf("%d %d", &len, &index);
+    int nums[len];
+    for (int i = 0; i < len; i++) {
+        scanf("%d", &nums[i]);
+    }
+    insertion_sort(nums, len);
+    int ind = len - index;
+    if (ind >= 0 && ind < len) {
+        printf("%d\n", nums[ind]);
+    } else {
+        printf("-1");
+    }
+    return 0;
+}
+
+void insertion_sort(int a[], int len) {
+    for (int i = 1; i < len; i++) {
+        int key = a[i];
+        int j = i - 1;
+        while (j >= 0 && a[j] > key) {
+            a[j + 1] = a[j];
+            j--;
+        }
+        a[j + 1] = key;
+    }
+    
+}
