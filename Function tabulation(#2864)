@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+
+ double f(double x){
+     double y;
+     y=3*sin(x);
+     return y;
+ }
+int main() {
+    double a,b,h,x;
+    scanf("%lf%lf%lf", &a,&b,&h);
+   for(x=a;x<=b;x=x+h){
+       printf("%.3lf %.3lf\n", x,f(x));
+   }
+
+    return 0;
+}
