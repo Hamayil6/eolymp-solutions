@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+      
+      int num, d, p, s;
+      p = 1; s = 0;
+      scanf("%d", &num);
+      while (num  > 0){
+        d = num % 10;
+        p = p * d;
+        s = s + d;
+        num /= 10;
+      }
+      printf("%.3lf", (double)p/s);
+      
+    return 0;
+}
