@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+struct Parts {
+    int points;
+    int id;
+};
+
+int main() {
+    
+    int len;
+    scanf("%d", &len);
+    struct Parts parts[len], c;
+    
+    for (int i = 0; i < len; i++) {
+        scanf("%d", &(parts[i].points));
+        parts[i].id = i + 1;
+    }
+    
+    for (int i = 0; i < len; i++) {
+        for (int j = 0; j < len - 1; j++) {
+            if (parts[j].points > parts[j + 1].points) {
+                c = parts[j];
+                parts[j] = parts[j + 1];
+                parts[j + 1] = c;
+                
+            } else if (parts[j].points == parts[j + 1].points) {
+                if (parts[j].id < parts[j + 1].id) {
+                    c = parts[j];
+                    parts[j] = parts[j + 1];
+                    parts[j + 1] = c;
+                    
+                }
+            }
+        }
+    }
+    
+    for (int i = len - 1; i >= 0; i--) {
+        printf("%d ", parts[i].id);
+    }
+    
+
+    return 0;
+}
