@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char expression[1001];
+    gets(expression);     
+    int length = strlen(expression);
+    int count = 0;    
+    for (int i = 1; i < length; i++) {
+        if (expression[i] == '+' || expression[i] == '-' || expression[i] == '*') {
+           count++;
+        } 
+    }    
+    printf("%d\n", count);   
+    return 0;
+}
