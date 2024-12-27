@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    long long a,b,i,digit1,digit2,digit3,digit4;
+    scanf("%d%d", &a,&b);
+    for(i=a; i<=b; i++){
+        digit1=i/1000;
+        digit2=(i/100)%10;
+        digit3=(i/10)%10;
+        digit4=i%10;
+        if(digit1%2!=0 && digit2%2!=0 && digit3%2!=0 && digit4%2!=0)
+        printf("%lld " ,i);
+    }
+    return 0;
+}
