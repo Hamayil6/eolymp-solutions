@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+double f( double x){
+    double y;
+    y=x*x*x+2*x*x-3;
+    return y;
+}
+
+int main() {
+   double x;
+   while(scanf("%lf", &x)!=EOF)
+   printf("%.4lf\n", f(x));
+   return 0;
+}
