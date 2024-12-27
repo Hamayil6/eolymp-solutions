@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char operator;
+    int a, c;
+    scanf("%d %c %d", &a, &operator, &c);
+    if (operator == '*') {
+        printf("%d\n", a * c);
+    } else if (operator == '+') {
+        printf("%d\n", a + c);
+    } else if (operator == '-') {
+        printf("%d\n", a - c);
+    } else if (operator == '/') {
+        if (c != 0) {
+            printf("%d\n", a / c);
+        } else {
+            printf("Error: Division by zero.\n");
+        }
+    } else {
+        printf("Error: Invalid operator.\n");
+    }
+
+    return 0;
+}
