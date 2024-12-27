@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    long long n;
+    int digit,m;
+    m=0;
+    scanf("%lld", &n);
+    while(n>0){
+        digit=n%10;
+        if(digit%2!=0){
+        m=m+1;    
+        }
+        n=n/10;
+    }
+    
+    printf("%d", m);
+    return 0;
+}
