@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+double f(double x){
+    double y;
+    y=sqrt(x)+2*x+sin(x);
+    return y;
+}
+
+int main() {
+   double x;
+   while(scanf("%lf", &x)!=EOF)
+   printf("%.4lf\n", f(x));
+    return 0;
+}
